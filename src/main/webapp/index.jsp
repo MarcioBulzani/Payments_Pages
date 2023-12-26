@@ -55,6 +55,13 @@
                             <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="mastercard" required>
                             <label class="form-check-label" for="mastercard">MasterCard</label>
                         </div>
+
+			<div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="mastercard" required>
+                            <label class="form-check-label" for="mastercard">Cash</label>
+                        </div>
+
+
                     </div>
 
                    
