@@ -1,99 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      /* Add some basic styling */
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-      }
-
-      /* Style the form container */
-      .form-container {
-        background-color: #f2f2f2;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-        margin: auto;
-        width: 400px;
-      }
-
-      /* Style the form header */
-      h1 {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      /* Style the input fields */
-      input[type="text"],
-      input[type="email"],
-      input[type="tel"],
-      input[type="number"] {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      /* Style the radio buttons */
-      input[type="radio"] {
-        margin-right: 10px;
-      }
-
-      /* Style the submit button */
-      input[type="submit"] {
-        width: 100%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin-top: 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      /* Style the error message */
-      .error {
-        color: red;
-        font-size: 14px;
-        margin-top: 10px;
-        text-align: center;
-      }
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #007bff;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+        }
+        button:hover {
+            background-color: #218838;
+        }
     </style>
-  </head>
-  <body>
-    <div class="form-container">
-      <h1>Payment Page</h1>
-      <form action="" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Payment Details</h1>
+                <form id="paymentForm" action="process_payment.php" method="post">
+                    <!-- Name -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+                    <!-- Amount -->
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount:</label>
+                        <input type="number" class="form-control" id="amount" name="amount" min="1" step="any" required>
+                    </div>
 
-        <label for="tel">Telephone:</label>
-        <input type="tel" id="tel" name="tel" required>
+                    <!-- Payment Method -->
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="visa" value="visa" required>
+                            <label class="form-check-label" for="visa">Visa</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="mastercard" required>
+                            <label class="form-check-label" for="mastercard">MasterCard</label>
+                        </div>
+                    </div>
 
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" name="amount" required>
+                   
 
-        <label for="payment-method">Payment Method:</label><br>
+               
 
-        <input type="radio" id="Visa" name="payment-method" value="Visa" required>
-        <label for="Visa">Visa</label><br>
-
-        <input type="radio" id="Mastercard" name="payment-method" value="Mastercard">
-        <label for="Mastercard">Mastercard</label><br>
-
-
-        <input type="submit" value="Submit">
-      </form>
-      <div class="error"></div>
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-success btn-block">Submit Payment</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </body>
-</html>
 
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
