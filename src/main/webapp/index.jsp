@@ -83,17 +83,12 @@
 
         <label for="payment-method">Payment Method:</label><br>
 
-        <input type="radio" id="visa" name="payment-method" value="visa" required>
-        <label for="visa">Visa</label><br>
+        <input type="radio" id="Visa" name="payment-method" value="Visa" required>
+        <label for="Visa">Visa</label><br>
 
-        <input type="radio" id="mastercard" name="payment-method" value="mastercard">
-        <label for="mastercard">Mastercard</label><br>
+        <input type="radio" id="Mastercard" name="payment-method" value="Mastercard">
+        <label for="Mastercard">Mastercard</label><br>
 
-	<input type="radio" id="mastercard" name="payment-method" value="mastercard">
-        <label for="mastercard">Paypal</label><br>
-
-        <input type="radio" id="mastercard" name="payment-method" value="mastercard">
-        <label for="mastercard">Apply Pay</label><br>
 
         <input type="submit" value="Submit">
       </form>
